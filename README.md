@@ -1,12 +1,12 @@
-💰 Expense Tracker with ML Insights & Prediction
+# 💰 Expense Tracker with ML Insights & Prediction
 
-📌 Overview
+## 📌 Overview
 
 This project is an end-to-end Machine Learning application that analyzes personal expense data, detects unusual spending patterns, and predicts future expenses. It combines data processing, anomaly detection, and regression modeling into a fast, interactive dashboard.
 
 ---
 
-🚀 Features
+## 🚀 Features
 
 * Upload expense CSV file
 * Automated data preprocessing and feature engineering
@@ -20,7 +20,7 @@ This project is an end-to-end Machine Learning application that analyzes persona
 
 ---
 
-🔮 Prediction Feature
+## 🔮 Prediction Feature
 
 The app allows users to predict future expenses based on:
 
@@ -32,7 +32,7 @@ This is powered by a machine learning regression model trained on historical dat
 
 ---
 
-⚡ Performance Optimization
+## ⚡ Performance Optimization
 
 To ensure fast performance (especially after deployment), caching is implemented:
 
@@ -41,7 +41,7 @@ To ensure fast performance (especially after deployment), caching is implemented
 * Insights Generation → `@st.cache_data`
 * Model Training → `@st.cache_resource`
 
-# Benefits
+### Benefits
 
 * Faster load times
 * Avoids recomputation on every interaction
@@ -50,13 +50,13 @@ To ensure fast performance (especially after deployment), caching is implemented
 
 ---
 
-🧠 Architecture
+## 🧠 Architecture
 
 CSV → Data Processing → Feature Engineering → ML Models (Anomaly + Prediction) → Insights → Streamlit UI
 
 ---
 
-📦 Module Breakdown
+## 📦 Module Breakdown
 
 * `data_processing.py`
   Handles data cleaning and feature engineering (date, day, month, weekend flag)
@@ -74,7 +74,7 @@ CSV → Data Processing → Feature Engineering → ML Models (Anomaly + Predict
 
 ---
 
-📁 Project Structure
+## 📁 Project Structure
 
 expense-ml-project/
 
@@ -95,7 +95,7 @@ expense-ml-project/
 
 ---
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 
 * Python
 * Pandas
@@ -104,20 +104,20 @@ expense-ml-project/
 
 ---
 
-▶️ How to Run Locally
+## ▶️ How to Run Locally
 
 pip install -r requirements.txt
 streamlit run app.py
 
 ---
 
-🌍 Live Demo
+## 🌍 Live Demo
 
 👉 [https://expense-ml-project.streamlit.app]
 
 ---
 
-📊 Example Insights
+## 📊 Example Insights
 
 * Identifies top spending category
 * Calculates average and total spend
@@ -127,7 +127,7 @@ streamlit run app.py
 
 ---
 
-🎯 Use Case
+## 🎯 Use Case
 
 This application helps users:
 
@@ -138,7 +138,7 @@ This application helps users:
 
 ---
 
-💡 Future Improvements
+## 💡 Future Improvements
 
 * Improve prediction accuracy with additional features
 * Add user authentication
@@ -148,7 +148,7 @@ This application helps users:
 
 ---
 
-📬 Author
+## 📬 Author
 
 Built as part of a Machine Learning learning journey to demonstrate:
 
