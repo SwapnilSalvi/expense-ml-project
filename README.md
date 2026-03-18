@@ -72,21 +72,21 @@ To improve performance on deployment, caching has been implemented:
 ## 📁 Project Structure
 
 expense-ml-project/
-
-├── data/  
-│   └── expenses.csv  
-
-├── notebooks/  
-│   └── eda.ipynb  
-
-├── src/  
-│   ├── data_processing.py   # Feature engineering  
-│   ├── model.py             # ML models (anomaly + prediction)  
-│   └── insights.py          # Insights & chart data  
-
-├── app.py                   # Streamlit app (UI + caching)  
-├── requirements.txt  
-└── README.md  
+│
+├── data/
+│   └── expenses.csv
+│
+├── notebooks/
+│   └── eda.ipynb
+│
+├── src/
+│   ├── data_processing.py   # Feature engineering
+│   ├── model.py             # ML models (anomaly + prediction)
+│   └── insights.py          # Insights & chart data
+│
+├── app.py                   # Streamlit app (UI + caching)
+├── requirements.txt
+└── README.md
 
 ---
 
