@@ -104,20 +104,20 @@ expense-ml-project/
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
-
+```
 ---
 
 ## 📊 Example Insights
 
-* Identifies top spending category
-* Calculates average and total spend
-* Detects unusual transactions (anomalies)
-* Visualizes category-wise and daily spending trends
-* Predicts future expenses based on input features
-* Visualizes:
-      * Category-wise spending
-      * Daily trends
-      * Anomaly distribution
+- Identifies top spending category
+- Calculates average and total spend
+- Detects unusual transactions (anomalies)
+- Visualizes category-wise and daily spending trends
+- Predicts future expenses based on input features
+- Visualizes:
+      - Category-wise spending
+      - Daily trends
+      - Anomaly distribution
 
 ---
 
@@ -125,20 +125,20 @@ streamlit run app.py
 
 This application helps users:
 
-* Track their expenses effectively
-* Identify abnormal spending behavior
-* Forecast future expenses
-* Gain insights into spending habits
+- Track their expenses effectively
+- Identify abnormal spending behavior
+- Forecast future expenses
+- Gain insights into spending habits
 
 ---
 
 ## 💡 Future Improvements
 
-* Improve prediction accuracy with additional features
-* Add user authentication
-* Connect to real-time data sources
-* Store data in a database
-* Add downloadable reports (PDF/Excel)
+- Improve prediction accuracy with additional features
+- Add user authentication
+- Connect to real-time data sources
+- Store data in a database
+- Add downloadable reports (PDF/Excel)
 
 ---
 
@@ -146,7 +146,7 @@ This application helps users:
 
 Built as part of a Machine Learning learning journey to demonstrate:
 
-* End-to-end ML pipeline
-* Model building & evaluation
-* Deployment & performance optimization
-* Production-ready architecture
+- End-to-end ML pipeline
+- Model building & evaluation
+- Deployment & performance optimization
+- Production-ready architecture
