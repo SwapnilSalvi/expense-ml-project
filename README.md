@@ -115,9 +115,9 @@ streamlit run app.py
 - Visualizes category-wise and daily spending trends
 - Predicts future expenses based on input features
 - Visualizes:
-      - Category-wise spending
-      - Daily trends
-      - Anomaly distribution
+  - Category-wise spending
+  - Daily trends
+  - Anomaly distribution
 
 ---
 
