@@ -4,13 +4,12 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 import pandas as pd
 
+# Anomaly Detection
 def detect_anomalies(X):
     model = IsolationForest(contamination=0.02, random_state=42)
-    model.fit(X)
-    
-    return model.predict(X)
+    return model.fit_predict(X)
 
-
+# Prediction Model
 def train_prediction_model(df):
     # Features & target
     X = df[['category', 'day_of_week', 'month']]
@@ -32,7 +31,7 @@ def train_prediction_model(df):
     
     return model, X.columns, mae
 
-
+# Prediction Function
 def predict_expense(model, columns, category, day_of_week, month):
         
     input_df = pd.DataFrame({
@@ -49,3 +48,12 @@ def predict_expense(model, columns, category, day_of_week, month):
     prediction = model.predict(input_df)[0]
     
     return prediction
+
+def generate_prediction(df, category, day_of_week, month):
+    model, columns, mae = train_prediction_model(df)
+    prediction = predict_expense(model, columns, category, day_of_week, month)
+    
+    return {
+        "prediction": prediction,
+        "mae": mae
+    }

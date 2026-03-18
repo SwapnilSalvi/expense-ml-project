@@ -1,12 +1,12 @@
-# 💰 Expense Tracker with ML Insights & Prediction
+💰 Expense Tracker with ML Insights & Prediction
 
-## 📌 Overview
+📌 Overview
 
-This project is an end-to-end Machine Learning application that analyzes personal expense data, detects unusual spending patterns, and predicts future expenses. It combines data processing, anomaly detection, and regression modeling into an interactive dashboard.
+This project is an end-to-end Machine Learning application that analyzes personal expense data, detects unusual spending patterns, and predicts future expenses. It combines data processing, anomaly detection, and regression modeling into a fast, interactive dashboard.
 
 ---
 
-## 🚀 Features
+🚀 Features
 
 * Upload expense CSV file
 * Automated data preprocessing and feature engineering
@@ -15,11 +15,12 @@ This project is an end-to-end Machine Learning application that analyzes persona
 * Insight generation (top category, average spend, total spend)
 * Interactive dashboard built with Streamlit
 * Category-wise and time-based visualizations
+* ⚡ Performance optimized using caching
 * Clean modular architecture (separation of concerns)
 
 ---
 
-## 🔮 Prediction Feature
+🔮 Prediction Feature
 
 The app allows users to predict future expenses based on:
 
@@ -31,13 +32,31 @@ This is powered by a machine learning regression model trained on historical dat
 
 ---
 
-## 🧠 Architecture
+⚡ Performance Optimization
 
-```id="y9d3d9"
+To ensure fast performance (especially after deployment), caching is implemented:
+
+* Data Loading → `@st.cache_data`
+* Data Processing → `@st.cache_data`
+* Insights Generation → `@st.cache_data`
+* Model Training → `@st.cache_resource`
+
+# Benefits
+
+* Faster load times
+* Avoids recomputation on every interaction
+* Smooth user experience
+* Production-ready behavior
+
+---
+
+🧠 Architecture
+
 CSV → Data Processing → Feature Engineering → ML Models (Anomaly + Prediction) → Insights → Streamlit UI
-```
 
-### Module Breakdown:
+---
+
+📦 Module Breakdown
 
 * `data_processing.py`
   Handles data cleaning and feature engineering (date, day, month, weekend flag)
@@ -51,34 +70,32 @@ CSV → Data Processing → Feature Engineering → ML Models (Anomaly + Predict
   Generates business insights and prepares chart data
 
 * `app.py`
-  Streamlit UI for user interaction, visualization, and prediction
+  Streamlit UI for user interaction, visualization, prediction, and caching
 
 ---
 
-## 📁 Project Structure
+📁 Project Structure
 
-```id="z3dq0o"
 expense-ml-project/
-│
+
 ├── data/
 │   └── expenses.csv
-│
+
 ├── notebooks/
 │   └── eda.ipynb
-│
+
 ├── src/
 │   ├── data_processing.py
 │   ├── model.py
 │   └── insights.py
-│
+
 ├── app.py
 ├── requirements.txt
 └── README.md
-```
 
 ---
 
-## 🛠 Tech Stack
+🛠 Tech Stack
 
 * Python
 * Pandas
@@ -87,22 +104,20 @@ expense-ml-project/
 
 ---
 
-## ▶️ How to Run Locally
+▶️ How to Run Locally
 
-```bash id="v72m3x"
 pip install -r requirements.txt
 streamlit run app.py
-```
 
 ---
 
-## 🌍 Live Demo
+🌍 Live Demo
 
-👉 https://expense-ml-project.streamlit.app
+👉 [https://expense-ml-project.streamlit.app]
 
 ---
 
-## 📊 Example Insights
+📊 Example Insights
 
 * Identifies top spending category
 * Calculates average and total spend
@@ -112,7 +127,7 @@ streamlit run app.py
 
 ---
 
-## 🎯 Use Case
+🎯 Use Case
 
 This application helps users:
 
@@ -123,16 +138,21 @@ This application helps users:
 
 ---
 
-## 💡 Future Improvements
+💡 Future Improvements
 
-* Add model caching for performance optimization
-* Improve prediction accuracy with more features
+* Improve prediction accuracy with additional features
 * Add user authentication
 * Connect to real-time data sources
 * Store data in a database
+* Add downloadable reports (PDF/Excel)
 
 ---
 
-## 📬 Author
+📬 Author
 
-Built as part of a Machine Learning learning journey to demonstrate end-to-end project development, clean architecture, and deployment readiness.
+Built as part of a Machine Learning learning journey to demonstrate:
+
+* End-to-end ML pipeline
+* Model building & evaluation
+* Deployment & performance optimization
+* Production-ready architecture
