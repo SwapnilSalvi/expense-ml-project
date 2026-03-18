@@ -2,75 +2,70 @@
 
 ## 📌 Overview
 
-This project is an end-to-end Machine Learning application that analyzes personal expense data, detects unusual spending patterns, and predicts future expenses. It combines data processing, anomaly detection, and regression modeling into a fast, interactive dashboard.
+This project is an end-to-end Machine Learning application that analyzes personal expense data and provides meaningful insights. It detects unusual spending patterns using anomaly detection, predicts future expenses, and presents results through an interactive and optimized dashboard.
+
+---
+
+## 🚀 Live App
+
+👉 Try it here:  
+https://expense-ml-project.streamlit.app
 
 ---
 
 ## 🚀 Features
 
-* Upload expense CSV file
-* Automated data preprocessing and feature engineering
-* Anomaly detection using Isolation Forest
-* Expense prediction using Random Forest Regressor
-* Insight generation (top category, average spend, total spend)
-* Interactive dashboard built with Streamlit
-* Category-wise and time-based visualizations
-* ⚡ Performance optimized using caching
-* Clean modular architecture (separation of concerns)
-
----
-
-## 🔮 Prediction Feature
-
-The app allows users to predict future expenses based on:
-
-* Category
-* Day of the week
-* Month
-
-This is powered by a machine learning regression model trained on historical data.
-
----
-
-## ⚡ Performance Optimization
-
-To ensure fast performance (especially after deployment), caching is implemented:
-
-* Data Loading → `@st.cache_data`
-* Data Processing → `@st.cache_data`
-* Insights Generation → `@st.cache_data`
-* Model Training → `@st.cache_resource`
-
-### Benefits
-
-* Faster load times
-* Avoids recomputation on every interaction
-* Smooth user experience
-* Production-ready behavior
+- Upload expense CSV file
+- Automated data preprocessing and feature engineering
+- Anomaly detection using Isolation Forest
+- Expense prediction using Machine Learning
+- Insight generation:
+  - Top spending category
+  - Average spend
+  - Total spend
+  - Anomaly analysis
+- Interactive charts (category-wise and time trends)
+- Performance optimized using caching
+- Clean modular architecture
 
 ---
 
 ## 🧠 Architecture
 
-CSV → Data Processing → Feature Engineering → ML Models (Anomaly + Prediction) → Insights → Streamlit UI
+CSV → Data Processing → Feature Engineering → ML Models → Insights → Streamlit UI
 
 ---
 
-## 📦 Module Breakdown
+## ⚡ Performance Optimization
 
-* `data_processing.py`
-  Handles data cleaning and feature engineering (date, day, month, weekend flag)
+To improve performance on deployment, caching has been implemented:
 
-* `model.py`
+- Data Loading → @st.cache_data
+- Data Processing → @st.cache_data
+- Insights Generation → @st.cache_data
+- Model Training → @st.cache_resource
 
-  * Anomaly detection using Isolation Forest
-  * Expense prediction using Random Forest Regressor
+### Benefits
 
-* `insights.py`
-  Generates business insights and prepares chart data
+- Faster app load times
+- Avoids recomputation on every interaction
+- Smooth user experience
+- Production-ready behavior
 
-* `app.py`
-  Streamlit UI for user interaction, visualization, prediction, and caching
+---
+
+## 🧠 Machine Learning Models
+
+### 1. Anomaly Detection
+- Model: Isolation Forest
+- Detects unusual or high-value transactions
+
+### 2. Expense Prediction
+- Model: Random Forest Regressor
+- Predicts expense based on:
+  - Category
+  - Day of week
+  - Month
 
 ---
 
@@ -78,42 +73,37 @@ CSV → Data Processing → Feature Engineering → ML Models (Anomaly + Predict
 
 expense-ml-project/
 
-├── data/
-│   └── expenses.csv
+├── data/  
+│   └── expenses.csv  
 
-├── notebooks/
-│   └── eda.ipynb
+├── notebooks/  
+│   └── eda.ipynb  
 
-├── src/
-│   ├── data_processing.py
-│   ├── model.py
-│   └── insights.py
+├── src/  
+│   ├── data_processing.py   # Feature engineering  
+│   ├── model.py             # ML models (anomaly + prediction)  
+│   └── insights.py          # Insights & chart data  
 
-├── app.py
-├── requirements.txt
-└── README.md
+├── app.py                   # Streamlit app (UI + caching)  
+├── requirements.txt  
+└── README.md  
 
 ---
 
 ## 🛠 Tech Stack
 
-* Python
-* Pandas
-* Scikit-learn
-* Streamlit
+- Python
+- Pandas
+- Scikit-learn
+- Streamlit
 
 ---
 
 ## ▶️ How to Run Locally
 
+```bash
 pip install -r requirements.txt
 streamlit run app.py
-
----
-
-## 🌍 Live Demo
-
-👉 [https://expense-ml-project.streamlit.app]
 
 ---
 
@@ -124,6 +114,10 @@ streamlit run app.py
 * Detects unusual transactions (anomalies)
 * Visualizes category-wise and daily spending trends
 * Predicts future expenses based on input features
+* Visualizes:
+      * Category-wise spending
+      * Daily trends
+      * Anomaly distribution
 
 ---
 
